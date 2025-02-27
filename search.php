@@ -119,6 +119,8 @@ if (count($users) > 0) {
         echo "<td><a class='btn btn-primary' href='edit.php?id={$u['id']}'>Editar</a>   <a class='btn btn-danger' href='delete.php?id={$u['id']}' onclick='return confirmDelete(event)'>Deletar</a><br></td>";
     }
     echo "</tbody></table>";
+} elseif(empty($searchQuery)) {
+    echo "<p>Nenhum resultado encontrado.</p>";
 } else {
     echo "<p>Nenhum resultado encontrado para '{$searchQuery}'</p>";
 }
