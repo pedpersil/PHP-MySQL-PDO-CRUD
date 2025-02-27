@@ -1,6 +1,9 @@
 # PHP-MySQL-PDO-CRUD
 ## Um CRUD feito com PHP, MySQL, PDO que tem sistema de login, sistema de paginação, sistema de busca.
 
+# Requisitos
+Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.
+
 ## 1 - Para instalar você precisa configurar os atributos no arquivo config.php
 
 define('DB_HOST', 'mysql');<br/>
