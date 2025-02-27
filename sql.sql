@@ -10,8 +10,6 @@ CREATE TABLE IF NOT EXISTS users (
 
 ALTER TABLE users ADD FULLTEXT(name, email);
 
-
-
 CREATE DATABASE IF NOT EXISTS crud_pdo;
 USE crud_pdo;
 
