@@ -20,8 +20,23 @@ class User {
     
         // Se o e-mail já existir, redirecionar para a página de criação com mensagem de erro
         if ($emailExists) {
+            /*
             header('Location: create.php?error=email_existente');
             exit();
+            */
+            echo "<script>
+                    Swal.fire({
+                        title: 'Atenção!',
+                        text: 'E-mail de usuário existente!',
+                        icon: 'warning',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = 'create.php?error=email_existente';  // Redireciona para a página de listagem
+                        }
+                    });
+                </script>";
+                exit();
         }
     
         // Se o e-mail não existir, proceder com a criação do usuário
