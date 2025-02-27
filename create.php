@@ -95,7 +95,7 @@ echo "Bem-vindo, " . $userInfo['name'] . "! <br>";
 </div>
 <div class="mb-3">
     
-  <label for="email" class="form-label">Email:<?php if (isset($_GET['error'])) echo "<p>{$_GET['error']}</p>"; ?></label>
+  <label for="email" class="form-label">Email:<?php if (isset($_GET['error'])) echo "<span class='text-danger'><p>E-mail existente!</p></span>"; ?></label>
   <input type="email" class="form-control" name="email" id="email" placeholder="nome@exemplo.com" required/>
 </div>
 <button class="btn btn-primary" type="submit">Criar</button>
