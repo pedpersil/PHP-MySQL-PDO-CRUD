@@ -97,6 +97,15 @@ $itemsPerPage = 50; // Número de usuários por página
 
 // Verificando a página atual (se não estiver definida, será 1)
 $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+if ($page < 1) {
+    // Se a página for menor que 1, redireciona para a página inicial
+    echo "<script type='text/javascript'>
+          window.location.href = 'index.php';
+          </script>";
+    exit();
+}
+
 $offset = ($page - 1) * $itemsPerPage; // Definindo o deslocamento
 
 
@@ -114,7 +123,15 @@ $totalUsers = $user->getTotalUsers();
 $totalPages = ceil($totalUsers / $itemsPerPage); // Calcular o total de páginas
 
 
+// Verificar se a página solicitada está dentro do intervalo de páginas válidas
+if ($page > $totalPages) {
+    // Se a página solicitada não existir, redireciona para index.php
+    echo "<script type='text/javascript'>
+          window.location.href = 'index.php';
+          </script>";
+    exit();
 
+}
 
 echo "<table class='table table-striped'>
   <thead>
