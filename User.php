@@ -96,6 +96,31 @@ class User {
         return $stmt->fetchColumn();
     }
     
+
+    public function search(string $query): array {
+        // Primeiro, vamos verificar se o query é um e-mail, e usar LIKE caso seja
+        $isEmail = filter_var($query, FILTER_VALIDATE_EMAIL); // Verifica se o query é um e-mail válido
+    
+        if ($isEmail) {
+            // Se for um e-mail, usamos LIKE
+            $sql = "SELECT * FROM {$this->table} WHERE email LIKE :query";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['query' => "%$query%"]);
+        } else {
+            // Caso contrário, usa MATCH para buscar por nome e email com o texto da consulta
+            $sql = "
+                SELECT * FROM {$this->table}
+                WHERE MATCH(name, email) AGAINST (:query IN BOOLEAN MODE)
+            ";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute(['query' => $query]);
+        }
+        
+        return $stmt->fetchAll();
+    }
+    
+
+    /*
     public function search(string $query): array {
         $sql = "
             SELECT * FROM {$this->table}
@@ -107,5 +132,6 @@ class User {
         
         return $stmt->fetchAll();
     }
+    */
     
 }
