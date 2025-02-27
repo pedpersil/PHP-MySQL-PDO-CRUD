@@ -48,6 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
               <div class="mb-5">
                 <h3>Log in</h3>
               </div>
+              <div>
+              <?php if (isset($error)) echo "<span class='text-danger'><p>{$error}</p></span>"; ?>
+            </div>
             </div>
           </div>
           <form method="post" action="login.php">
@@ -95,4 +98,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-<?php if (isset($error)) echo "<p>{$error}</p>"; ?>
+
