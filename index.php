@@ -3,7 +3,7 @@
 require_once 'Auth.php';
 
 session_start();
-
+session_regenerate_id(true); // Regenera o ID da sessão após o login
 $auth = new Auth();
 if (!$auth->checkLogin()) {
     header('Location: login.php');
