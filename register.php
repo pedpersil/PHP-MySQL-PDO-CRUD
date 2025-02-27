@@ -4,6 +4,14 @@ require_once 'Auth.php';
 
 session_start();
 
+
+$errorMessage = '';
+// Verificar se há um erro na URL (email já existe)
+if (isset($_GET['error']) && $_GET['error'] === 'email_existente') {
+    $errorMessage = 'Este e-mail já está registrado. Tente outro e-mail.';
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['firstName'] . " " . $_POST['lastName'];
     $email = $_POST['email'];
@@ -65,6 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="col-12">
                   <div class="form-floating mb-3">
                     <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com" required>
+                    <?php if ($errorMessage): ?>
+                    <p style="color: red;"><?php echo $errorMessage; ?></p>  
+                  <?php endif; ?>
                     <label for="email" class="form-label">Email</label>
                   </div>
                 </div>
