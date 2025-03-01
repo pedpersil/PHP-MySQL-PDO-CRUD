@@ -50,7 +50,7 @@ if (!$user->getById($id)) {
 <script type="text/javascript">
     function confirmDelete() {
         // Exibe a caixa de confirmação
-        var result = confirm("Tem certeza que deseja excluir este usuário?");
+        var result = confirm("##Tem certeza que deseja excluir este usuário?");
         if (result) {
             // Se o usuário confirmar, a ação prossegue
             return true;

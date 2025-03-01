@@ -16,9 +16,9 @@ class Auth {
     }
 
 
-    public function register(string $name, string $email, string $password): bool {
+    public function register(string $name, string $email, string $password, string $confirmPassword): bool {
         // Verificar se o e-mail já está registrado
-        $sql = "SELECT COUNT(*) FROM users WHERE email = :email";
+        $sql = "SELECT COUNT(*) FROM {$this->table} WHERE email = :email";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute(['email' => $email]);
         $emailExists = $stmt->fetchColumn() > 0;
@@ -28,7 +28,12 @@ class Auth {
             header('Location: register.php?error=email_existente');
             exit();
         }
-    
+        
+        if ($password != $confirmPassword) {
+            header('Location: register.php?error=password_diferentes');
+            exit();
+        }
+
         // Se o e-mail não existir, proceder com o registro
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT); // Criptografando a senha
         $sql = "INSERT INTO {$this->table} (name, email, password) VALUES (:name, :email, :password)";
