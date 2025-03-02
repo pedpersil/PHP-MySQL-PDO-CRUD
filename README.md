@@ -1,7 +1,18 @@
 # PHP-MySQL-PDO-CRUD
 ## Um CRUD feito com PHP, MySQL, PDO que tem sistema de login, sistema de paginação, sistema de busca.
 
-# Demonstração on-line <a href="http://areadeteste.42web.io/crud/">Click Aqui</a>
+## Demo on-line <a href="http://areadeteste.42web.io/crud/">Click Aqui</a>
+
+# Telas
+
+Página de Login
+<img src="http://areadeteste.42web.io/crud/crud-img/login.jpg" alt="Página de Login"><br>
+Página de registro
+<img src="http://areadeteste.42web.io/crud/crud-img/register.jpg" alt="Página de registro"><br>
+Lista todos os registros
+<img src="http://areadeteste.42web.io/crud/crud-img/index.jpg" alt="Lista todos os registros"><br>
+Cria novo registro
+<img src="http://areadeteste.42web.io/crud/crud-img/create.jpg" alt="Criar novo registro"><br>
 
 # Requisitos
 Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.
@@ -40,3 +51,5 @@ CREATE TABLE IF NOT EXISTS login (<br/>
 );<br/>
 
 ## 3 - Fazer o upload dos arquivos para o seu servidor.
+
+
