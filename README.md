@@ -13,6 +13,8 @@ Lista todos os registros
 <img src="http://areadeteste.42web.io/crud/crud-img/listar.jpg" alt="Lista todos os registros"><br><br>
 Cria novo registro
 <img src="http://areadeteste.42web.io/crud/crud-img/create.jpg" alt="Criar novo registro"><br><br>
+Editar registro
+<img src="http://areadeteste.42web.io/crud/crud-img/editar.jpg" alt="Editar registro"><br><br>
 
 # Requisitos
 Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.
