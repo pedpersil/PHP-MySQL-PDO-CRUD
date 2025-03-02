@@ -6,13 +6,13 @@
 # Telas
 
 Página de Login
-<img src="http://areadeteste.42web.io/crud/crud-img/login.jpg" alt="Página de Login"><br>
+<img src="http://areadeteste.42web.io/crud/crud-img/login.jpg" alt="Página de Login"><br><br>
 Página de registro
-<img src="http://areadeteste.42web.io/crud/crud-img/register.jpg" alt="Página de registro"><br>
+<img src="http://areadeteste.42web.io/crud/crud-img/register.jpg" alt="Página de registro"><br><br>
 Lista todos os registros
-<img src="http://areadeteste.42web.io/crud/crud-img/index.jpg" alt="Lista todos os registros"><br>
+<img src="http://areadeteste.42web.io/crud/crud-img/listar.jpg" alt="Lista todos os registros"><br><br>
 Cria novo registro
-<img src="http://areadeteste.42web.io/crud/crud-img/create.jpg" alt="Criar novo registro"><br>
+<img src="http://areadeteste.42web.io/crud/crud-img/create.jpg" alt="Criar novo registro"><br><br>
 
 # Requisitos
 Servidor Web como Apache ou o Nginx, O php 8+, Mysql, PHPMyAdmin.
