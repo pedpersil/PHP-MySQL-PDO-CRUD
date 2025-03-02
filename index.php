@@ -13,7 +13,7 @@ if (!$auth->checkLogin()) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -204,7 +204,7 @@ foreach ($users as $u) {
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Pedro Silva 2025</div>
+                            <div class="text-muted">Copyright &copy; <a href="https://github.com/pedpersil">Pedro Silva</a> 2025</div>
                         </div>
                     </div>
                 </footer>
