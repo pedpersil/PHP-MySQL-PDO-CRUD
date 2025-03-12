@@ -29,9 +29,6 @@ define('SESSION_NAME', 'user_session'); // Nome da sessão<br/>
 
 ## 2 - Precisa criar o banco de dados e tabelas usando esses comandos usando o PHPMyAdmin
 
-CREATE DATABASE IF NOT EXISTS crud_pdo;<br/>
-USE crud_pdo;<br/>
-
 CREATE TABLE IF NOT EXISTS users (<br/>
     id INT AUTO_INCREMENT PRIMARY KEY,<br/>
     name VARCHAR(255) NOT NULL,<br/>
@@ -40,9 +37,6 @@ CREATE TABLE IF NOT EXISTS users (<br/>
 );<br/>
 
 ALTER TABLE users ADD FULLTEXT(name, email);<br/>
-
-CREATE DATABASE IF NOT EXISTS crud_pdo;<br/>
-USE crud_pdo;<br/>
 
 CREATE TABLE IF NOT EXISTS login (<br/>
     id INT AUTO_INCREMENT PRIMARY KEY,<br/>
