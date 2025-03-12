@@ -1,7 +1,8 @@
 # PHP-MySQL-PDO-CRUD
 ## Um CRUD feito com PHP, MySQL, PDO que tem sistema de login, sistema de paginação, sistema de busca.
 
-# Demo on-line <a href="http://areadeteste.42web.io/crud/">Click Aqui</a>
+# Demo on-line <a href="http://areadeteste.42web.io/crud/">Click Aqui</a><br>
+Crie um usuário com email e senha e depois faça o login.
 
 # Telas
 
